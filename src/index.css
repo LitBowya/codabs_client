@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* Font Face Definitions */
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url('/fonts/Rubik-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@theme {
+    /* Color palette */
+    --color-primary: oklch(21% 0.034 264.665);
+    --color-primary-light: rgb(30 58 138);
+    --color-primary-lighter: rgb(59 130 246);
+    --color-secondary: oklch(70.5% 0.213 47.604);
+    --color-secondary-light: rgb(251, 130, 45);
+    --color-secondary-lighter: rgb(255, 163, 90);
+
+    --bg-primary: oklch(21% 0.034 264.665);
+    --bg-primary-light: rgb(30 58 138);
+    --bg-primary-lighter: rgb(59 130 246);
+    --bg-secondary: oklch(70.5% 0.213 47.604);
+    --bg-secondary-light: rgb(251, 130, 45);
+    --bg-secondary-lighter: rgb(255, 163, 90);
+
+    /* Font families */
+    --font-title: "Rubik", sans-serif;
+    --font-subtitle: "Bebas Neue", sans-serif;
+    --font-text: "Roboto", sans-serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        color-scheme: light dark;
+    }
+
+    h1, h2, h3 {
+        font-family: var(--font-title), sans-serif;
+        letter-spacing: 0.05em;
+    }
+
+    h4, h5, h6 {
+        font-family: var(--font-subtitle), sans-serif;
+    }
+
+    p, span, a, li {
+        font-family: var(--font-text), sans-serif;
+    }
+
+    :root {
+        --vh: 1vh;
+    }
+
+    .min-h-dscreen {
+        min-height: 100dvh;
+    }
+
+    .linear-background {
+        background: linear-gradient(75deg, black 50%, transparent 50%);
+    }
+
+}
+
+@layer utilities {
+    .active_link {
+        @apply text-secondary relative
+        before:absolute before:left-0 before:bottom-0
+        before:h-[3px] before:bg-secondary-light max-lg:before:bg-white
+        before:rounded-full before:w-1/2
+        before:transition-all before:duration-300 before:ease-in-out
+        before:-translate-x-0;
+    }
+
+    .link_hover {
+        @apply relative overflow-hidden
+        before:absolute before:left-0 before:bottom-0
+        before:h-[3px] before:bg-secondary-light max-lg:before:bg-white
+        before:rounded-full before:w-0
+        before:transition-all before:duration-500 before:ease-in-out;
+    }
+
+    .link_hover:hover::before,
+    .link_hover.active_link::before {
+        @apply w-full;
+    }
+
+    .max-width {
+        @apply max-w-[1350px] mx-auto px-5;
+    }
+}
+
+.gsap-split-wrapper span {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    /* Add any other properties you need to inherit */
+}
