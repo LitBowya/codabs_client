@@ -56,7 +56,7 @@ const AboutUsSection = () => {
             <div className="relative z-10">
               <AnimatedScrollElement
                 tag="img"
-                className="rounded-lg shadow-lg h-96"
+                className="rounded-lg shadow-lg lg:h-96"
                 src="/images/construction.jpg"
                 alt="Construction Site"
                 animationProps={{
