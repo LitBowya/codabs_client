@@ -56,8 +56,8 @@ const AboutUsSection = () => {
             <div className="relative z-10">
               <AnimatedScrollElement
                 tag="img"
-                className="rounded-lg shadow-lg"
-                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f"
+                className="rounded-lg shadow-lg h-96"
+                src="/images/construction.jpg"
                 alt="Construction Site"
                 animationProps={{
                   from: { scale: 0, opacity: 0 },
@@ -78,7 +78,7 @@ const AboutUsSection = () => {
             <AnimatedScrollElement
               tag="img"
               className="absolute top-[-30px] left-[-20px] w-24 md:w-36 border-4 border-white z-10 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 "
-              src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f"
+              src="/images/con1.jpg"
               alt="Construction Site"
               animationProps={{
                 from: { y: -110, opacity: 0 },
@@ -95,7 +95,7 @@ const AboutUsSection = () => {
             <AnimatedScrollElement
               tag="img"
               className="absolute bottom-[-30px] right-[-10px] w-24 h-36 md:w-48 md:h-56 rounded-lg border-4 z-10 border-primary shadow-xl transform hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f"
+              src="/images/construction.webp"
               alt="Construction Site"
               animationProps={{
                 from: { y: 110, opacity: 0 },
@@ -104,7 +104,7 @@ const AboutUsSection = () => {
                   opacity: 1,
                   duration: 2,
                   delay: 2,
-                  ease: "slow(0.7,0.7,false)"
+                  ease: "bounce"
                 }
               }}
             />
