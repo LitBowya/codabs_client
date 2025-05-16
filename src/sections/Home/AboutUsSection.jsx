@@ -104,7 +104,7 @@ const AboutUsSection = () => {
                   opacity: 1,
                   duration: 2,
                   delay: 2,
-                  ease: "slow(0.7,0.7,false"
+                  ease: "slow(0.7,0.7,false)"
                 }
               }}
             />
@@ -123,24 +123,24 @@ const AboutUsSection = () => {
               Passion. Precision. Performance.
             </AnimatedScrollText>
 
-            <AnimatedScrollText
-              types="chars"
-              tagName="h2"
+            <AnimatedScrollElement
+              tag="div"
               animationProps={
                 {
-                  x: "90%",
-                  opacity: 0,
-                  rotationZ: 50,
-                  delay: 0.5,
-                  duration: 0.5,
-                  ease: "power1.inOut",
-                  stagger: 0.2
+                  from: { x: 110, opacity: 0 },
+                  to: {
+                    x: 0,
+                    opacity: 1,
+                    duration: 2,
+                    delay: 2,
+                    ease: "slow(0.7,0.7,false)"
+                  }
                 }
               }
               className={`text-3xl sm:text-4xl xl:text-5xl font-bold text-primary mb-4`}
             >
-              building excellence since 2005
-            </AnimatedScrollText>
+              <h3>building excellence since 2005</h3>
+            </AnimatedScrollElement>
 
             <AnimatedScrollText
               types="lines"
