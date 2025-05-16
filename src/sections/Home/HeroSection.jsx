@@ -110,7 +110,7 @@ const HeroSection = () => {
         className="hero-bg w-full bg-center bg-cover relative border-l-[10px] md:border-l-[15px] border-orange-500"
         style={{
           backgroundImage: `linear-gradient(60deg, rgba(0,0,0,0.8) 50%, transparent), 
-          url("https://coralhomes.com.au/wp-content/uploads/Atlanta-Series.png")`,
+          url("/images/nice.jpeg")`,
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
