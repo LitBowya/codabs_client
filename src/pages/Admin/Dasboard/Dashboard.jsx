@@ -9,7 +9,6 @@ import TopServices from "./TopServices.jsx";
 
 const Dashboard = () => {
   const { data: summary, isLoading, isError, refetch } = useGetSummaryQuery();
-  console.log(summary);
 
   // Process data for top blogs and projects
   const processData = (data) => {
