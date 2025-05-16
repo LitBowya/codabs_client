@@ -21,7 +21,7 @@ const ServiceDetails = () => {
   return (
     <div className={`bg-primary`}>
       <div className="max-width py-16 lg:py-28">
-        <div className="mb-8 pt-16 lg:pt-24">
+        <div className="mb-8">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center text-gray-300 cursor-pointer hover:text-gray-100 mb-8"

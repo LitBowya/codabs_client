@@ -5,6 +5,7 @@ import Spinner from "../../components/Spinner";
 import ErrorMessage from "../../components/ErrorMessage";
 import AnimatedScrollElement from "../../components/AnimatedScrollElement";
 import { useGetProjectByIdQuery } from "../../redux/services/projectApi.js";
+import { format } from "date-fns";
 import React from "react";
 
 const ProjectDetails = () => {
@@ -24,9 +25,9 @@ const ProjectDetails = () => {
   };
 
   return (
-    <div className={`bg-primary`}>
+    <div className={`bg-primary pb-12`}>
       <div className="max-width">
-        <div className="mb-8 py-16 lg:pt-24">
+        <div className="mb-8 pt-16 lg:pt-24">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center text-gray-300 cursor-pointer hover:text-gray-100 mb-8"
@@ -59,8 +60,8 @@ const ProjectDetails = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Project Timeline</h3>
                     <p className="text-gray-600">
-                      {new Date(project.startDate).toLocaleDateString()} - {" "}
-                      {project.endDate ? new Date(project.endDate).toLocaleDateString() : "Ongoing"}
+                      {format(new Date(project.startDate), "PP")} - {" "}
+                      {project.endDate ? format(new Date(project.endDate), "PP") : "Ongoing"}
                     </p>
                   </div>
                 </div>

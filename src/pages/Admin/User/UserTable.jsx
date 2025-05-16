@@ -21,6 +21,7 @@ import InputField from "../../../components/InputField";
 import Spinner from "../../../components/Spinner";
 import EmptyState from "../../../components/EmptyState";
 import { useSelector } from "react-redux";
+import { format } from "date-fns";
 
 const UserTable = () => {
   // Filter and pagination state
@@ -393,7 +394,7 @@ const UserTable = () => {
                             </p>
                             <p>
                               <span className="font-medium">Registered:</span>{" "}
-                              {new Date(user.createdAt).toLocaleDateString()}
+                              {format(new Date(user.createdAt), "PP")}
                             </p>
                           </div>
                           <div className="space-y-2">

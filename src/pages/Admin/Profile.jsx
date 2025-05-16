@@ -2,6 +2,7 @@ import React from "react";
 import { FaUser, FaEnvelope, FaPhone, FaCalendar, FaIdBadge, FaEdit } from "react-icons/fa";
 import { RiShieldUserFill } from "react-icons/ri";
 import { useSelector } from "react-redux";
+import { format } from "date-fns";
 
 const Profile = () => {
   const auth = useSelector((state) => state.auth);
@@ -88,11 +89,7 @@ const Profile = () => {
                   <h3 className="font-semibold text-gray-700">Member Since</h3>
                 </div>
                 <p className="text-gray-600">
-                  {new Date(createdAt).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric"
-                  })}
+                  {format(new Date(createdAt), "PP")}
                 </p>
               </div>
 

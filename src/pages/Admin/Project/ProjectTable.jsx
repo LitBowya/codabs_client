@@ -288,7 +288,7 @@ const ProjectTable = ({
                   </span>
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                {format(parseISO(project.startDate), "MM/dd/yyyy")}
+                {format(parseISO(project.startDate), "PP")}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                 <button
