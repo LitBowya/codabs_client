@@ -1,8 +1,8 @@
 import React, {useState, useRef, useEffect} from "react";
-import { Link, useLocation } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import {Link, useLocation} from "react-router-dom";
+import {FaBars, FaTimes} from "react-icons/fa";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import {useGSAP} from "@gsap/react";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -16,13 +16,13 @@ const Navbar = () => {
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     const navLinks = [
-        { label: "About Us", path: "/about-us" },
-        { label: "Services", path: "/services" },
-        { label: "Projects", path: "/project" },
-        { label: "Our Team", path: "/our-team" },
-        { label: "FAQ", path: "/faq" },
-        { label: "Blog", path: "/blog" },
-        { label: "Contact Us", path: "/contact-us" },
+        {label: "About Us", path: "/about-us"},
+        {label: "Services", path: "/services"},
+        {label: "Projects", path: "/project"},
+        {label: "Our Team", path: "/our-team"},
+        {label: "FAQ", path: "/faq"},
+        {label: "Blogs", path: "/blog"},
+        {label: "Contact Us", path: "/contact-us"},
     ];
 
     // Animation for navbar entry
@@ -66,7 +66,8 @@ const Navbar = () => {
 
     return (
         <nav className={`w-full fixed top-0 lg:top-3 z-50`} ref={navRef}>
-            <div className="max-width backdrop-blur-lg shadow-lg  lg:rounded-lg py-3 flex justify-between items-center bg-black/70">
+            <div
+                className="max-width backdrop-blur-lg shadow-lg  lg:rounded-lg py-3 flex justify-between items-center bg-black/70">
                 {/* Logo with animation ref */}
                 <Link
                     to="/"
@@ -78,7 +79,7 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-6 text-md font-medium text-gray-200">
-                    {navLinks.map(({ label, path }, index) => (
+                    {navLinks.map(({label, path}, index) => (
                         <li key={path}>
                             <Link
                                 to={path}
@@ -97,7 +98,7 @@ const Navbar = () => {
                     onClick={toggleMenu}
                     ref={menuIconRef}
                 >
-                    {menuOpen ? <FaTimes /> : <FaBars />}
+                    {menuOpen ? <FaTimes/> : <FaBars/>}
                 </div>
             </div>
 
@@ -107,7 +108,7 @@ const Navbar = () => {
                     className="md:hidden bg-black/90 h-screen backdrop-blur-md shadow-md px-4 py-4 space-y-4"
                     ref={mobileMenuRef}
                 >
-                    {navLinks.map(({ label, path }, index) => (
+                    {navLinks.map(({label, path}, index) => (
                         <Link
                             key={path}
                             to={path}
