@@ -30,9 +30,6 @@ const Dashboard = () => {
   };
 
   const { topBlogs, topProjects, topServices } = processData(summary?.data);
-
-  console.log(topServices);
-
   return (
     <div>
       <div className="max-width">

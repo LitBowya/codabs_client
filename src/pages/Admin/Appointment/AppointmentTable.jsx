@@ -37,8 +37,7 @@ const AppointmentTable = ({
   const [acceptingId, setAcceptingId] = useState(null);
   const [rejectingId, setRejectingId] = useState(null);
   const [acceptAppointment] = useAcceptAppointmentMutation();
-  const [rejectAppointment, { isLoading: isRejectedLoading }] =
-    useRejectAppointmentMutation();
+  const [rejectAppointment] = useRejectAppointmentMutation();
 
   const handleAccept = async (id) => {
     try {
@@ -306,20 +305,6 @@ const AppointmentTable = ({
                                 {rejectReasons.length}/200
                               </div>
                             </div>
-
-                            <button
-                              onClick={() => handleReject(appointment._id)}
-                              className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                            >
-                              {isRejectedLoading ? (
-                                <Spinner size={20} color="#ffffff" />
-                              ) : (
-                                <>
-                                  <FiXCircle className="w-5 h-5 mr-2" />
-                                  Confirm Rejection
-                                </>
-                              )}
-                            </button>
 
                             {rejectingId === appointment._id ? (
                               <Spinner size={24} />
