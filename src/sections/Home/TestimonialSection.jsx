@@ -20,44 +20,23 @@ const TestimonialSection = () => {
     <section className="bg-primary border-r-[10px] md:border-r-[15px] border-orange-500 py-24">
       <div className="max-width">
         <div className="mb-12 text-end">
-          <AnimatedScrollText
-            types="chars"
-            tagName="h4"
+          <h4
             className={`tag text-white`}
           >
             Trust, Truth, Testimony
-          </AnimatedScrollText>
-          <AnimatedScrollText
-            types="chars"
-            tagName="h2"
-            animationProps={
-              {
-                opacity: 0,
-                ease: "power1.inOut",
-                stagger: 0.1
-              }
-            }
-            className={`title text-secondary lowercase`}
+          </h4>
+          <h2
+            className={`title text-lg lg:text-3xl text-secondary lowercase`}
           >
             Client Experiences That Define Us
-          </AnimatedScrollText>
+          </h2>
 
-          <AnimatedScrollText
-            types="chars"
-            tagName="p"
-            animationProps={
-              {
-                opacity: 0,
-                rotationZ: 50,
-                ease: "power1.inOut",
-                stagger: 0.1
-              }
-            }
+          <p
             className={`subtitle`}
           >
             Our reputation is built not only with concrete and steel, but with the words of clients whose expectations
             we've exceeded.
-          </AnimatedScrollText>
+          </p>
         </div>
 
         {testimonials.length === 0 ? (

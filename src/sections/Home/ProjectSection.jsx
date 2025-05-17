@@ -18,44 +18,23 @@ const ProjectSection = () => {
     <section className="bg-primary border-r-[10px] md:border-r-[15px] border-orange-500 py-24">
       <div className="max-width">
         <div className="mb-12 text-end">
-          <AnimatedScrollText
-            types="chars"
-            tagName="h4"
+          <h4
             className={`tag text-white`}
           >
             Craft, Commitment, Completion
-          </AnimatedScrollText>
-          <AnimatedScrollText
-            types="chars"
-            tagName="h2"
-            animationProps={
-              {
-                opacity: 0,
-                ease: "power1.inOut",
-                stagger: 0.1
-              }
-            }
+          </h4>
+          <h2
             className={`title text-secondary lowercase`}
           >
             Our Legacy in Concrete and Steel
-          </AnimatedScrollText>
+          </h2>
 
-          <AnimatedScrollText
-            types="chars"
-            tagName="p"
-            animationProps={
-              {
-                opacity: 0,
-                rotationZ: 50,
-                ease: "power1.inOut",
-                stagger: 0.1
-              }
-            }
+          <p
             className={`subtitle`}
           >
             From groundbreaking to grand openings, our projects reflect a relentless dedication to quality, innovation,
             and lasting impact.
-          </AnimatedScrollText>
+          </p>
         </div>
 
         {projects.length === 0 ? (

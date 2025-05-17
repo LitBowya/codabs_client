@@ -18,44 +18,23 @@ const OurTeamSection = () => {
     <section className="bg-primary border-r-[10px] md:border-r-[15px] border-orange-500 py-24">
       <div className="max-width">
         <div className="mb-12 text-end">
-          <AnimatedScrollText
-            types="chars"
-            tagName="h4"
+          <h4
             className={`tag text-white`}
           >
             People, Passion, Precision
-          </AnimatedScrollText>
-          <AnimatedScrollText
-            types="chars"
-            tagName="h2"
-            animationProps={
-              {
-                opacity: 0,
-                ease: "power1.inOut",
-                stagger: 0.1
-              }
-            }
+          </h4>
+          <h2
             className={`title text-secondary lowercase`}
           >
             The Minds Behind the Build
-          </AnimatedScrollText>
+          </h2>
 
-          <AnimatedScrollText
-            types="chars"
-            tagName="p"
-            animationProps={
-              {
-                opacity: 0,
-                rotationZ: 50,
-                ease: "power1.inOut",
-                stagger: 0.1
-              }
-            }
+          <p
             className={`subtitle`}
           >
             Our strength lies in the talent and collaboration of individuals united by a shared pursuit of excellence in
             construction.
-          </AnimatedScrollText>
+          </p>
         </div>
 
         {teams.length === 0 ? (

@@ -54,7 +54,7 @@ const TestimonialCard = ({ testimonial }) => {
 
       {/* Hover-activated Company Badge */}
       <div
-        className={`absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-2 transition-all duration-500 ${isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+        className={`absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-2 transition-all duration-500 ${isHovered ? "lg:opacity-100 lg:translate-y-0" : "lg:opacity-0 lg:translate-y-4"}`}>
         <span className="text-sm font-medium text-secondary">Featured at</span>
         <span className="text-white">{testimonial.company}</span>
       </div>

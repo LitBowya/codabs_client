@@ -27,44 +27,23 @@ const ServiceSection = () => {
       />
       <div className="max-width">
         <div className="mb-12 text-end">
-          <AnimatedScrollText
-            types="chars"
-            tagName="h4"
+          <h4
             className={`tag text-white`}
           >
             Excellence, Efficiency, Execution
-          </AnimatedScrollText>
-          <AnimatedScrollText
-            types="chars"
-            tagName="h2"
-            animationProps={
-              {
-                opacity: 0,
-                ease: "power1.inOut",
-                stagger: 0.1
-              }
-            }
+          </h4>
+          <h2
             className={`title text-secondary lowercase`}
           >
             Expert Construction Services
-          </AnimatedScrollText>
+          </h2>
 
-          <AnimatedScrollText
-            types="chars"
-            tagName="p"
-            animationProps={
-              {
-                opacity: 0,
-                rotationZ: 50,
-                ease: "power1.inOut",
-                stagger: 0.1
-              }
-            }
+          <p
             className={`subtitle`}
           >
             Our services encompass every facet of construction, delivering resilient structures that exemplify
             precision, durability, and visionary craftsmanship.
-          </AnimatedScrollText>
+          </p>
         </div>
 
 

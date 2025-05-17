@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ProjectCard = ({ project }) => {
   return (
     <div
-      className="group relative h-[600px] cursor-pointer overflow-hidden rounded-2xl bg-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gray-900/50">
+      className="group relative h-[550px] lg:h-[600px] cursor-pointer overflow-hidden rounded-2xl bg-gray-800 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gray-900/50">
       {/* Image Container with Overlay */}
       <div className="relative h-60 overflow-hidden">
         <img
@@ -23,9 +23,9 @@ const ProjectCard = ({ project }) => {
           <h4 className="font-medium text-gray-300">{project.location}</h4>
         </div>
 
-        <h3 className="mb-3 text-2xl font-bold text-white">{project.title}</h3>
+        <h3 className="mb-3 text-xl lg:text-2xl font-bold text-white">{project.title}</h3>
 
-        <p className="mb-5 line-clamp-3 text-gray-400">
+        <p className="mb-5 line-clamp-3 text-sm lg:text-md text-gray-400">
           {project.description}
         </p>
 
@@ -34,7 +34,7 @@ const ProjectCard = ({ project }) => {
           {project.tags.map((tag, index) => (
             <span
               key={index}
-              className="rounded-full bg-secondary-lighter/20 px-3 py-1 text-sm text-secondary"
+              className="rounded-full bg-secondary-lighter/20 px-2 py-1 text-sm text-secondary"
             >
               {tag}
             </span>
