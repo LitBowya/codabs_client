@@ -23,7 +23,7 @@ const SectionHero = ({
 
   return (
     <section
-      className={`relative h-[50vh] lg:h-[80vh] min-h-[500px] max-h-[900px] w-full overflow-hidden ${textColor}`}
+      className={`relative h-[40vh] lg:h-[60vh] max-h-[900px] w-full overflow-hidden ${textColor}`}
     >
       {/* Background image */}
       {imageUrl && (
