@@ -39,7 +39,7 @@ const AppRoutes = () => {
       <Route path="*" element={
         <UserLayout>
           <Routes>
-            <Route path="" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/services" element={<Services />} />
@@ -62,7 +62,7 @@ const AppRoutes = () => {
         element={
           <AdminLayout>
             <Routes>
-              <Route path="" element={<Dashboard />} />
+              <Route path="/" element={<Dashboard />} />
               <Route path="/projects" element={<Project />} />
               <Route path="/categories" element={<Category />} />
               <Route path="/appointment" element={<Appointment />} />

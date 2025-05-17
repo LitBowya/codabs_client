@@ -57,14 +57,14 @@ const SectionHero = ({
 
           {/* Title */}
           {title && (
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4 drop-shadow-md">
+            <h1 className="text-2xl lg:text-6xl font-bold leading-tight mb-4 drop-shadow-md">
               {title}
             </h1>
           )}
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-8 drop-shadow-sm">
+            <p className="text-md lg:text-2xl max-w-2xl mx-auto mb-8 drop-shadow-sm">
               {subtitle}
             </p>
           )}

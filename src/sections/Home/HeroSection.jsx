@@ -10,20 +10,7 @@ const HeroSection = () => {
   const tl = useRef();
 
   // Function to split text into characters
-  const renderAnimatedText = (text, className) => {
-    return (
-      <span className={className}>
-      {text.split("").map((char, index) => (
-        <span
-          key={index}
-          className={`${className}-char inline-block font-title`}
-        >
-          {char === " " ? "\u00A0" : char}
-        </span>
-      ))}
-    </span>
-    );
-  };
+
 
   useGSAP(() => {
     tl.current = gsap.timeline({ defaults: { ease: "power4.out" } });
@@ -37,13 +24,21 @@ const HeroSection = () => {
     });
 
     // Animate brand name characters
-    tl.current.from(".brand-char", {
+    tl.current.from(".brand-text", {
       opacity: 0,
       y: 100,
       rotation: -45,
-      duration: 0.8,
-      stagger: 0.05
+      duration: 0.8
     }, "-=1.5");
+
+    // Animate brand name characters
+    tl.current.from(".brand-text-2", {
+      opacity: 0,
+      x: -100,
+      rotation: 45,
+      duration: 0.8,
+      delay: 1
+    }, "-=1.25");
 
     // Animate constructions characters
     tl.current.from(".construction-char", {
@@ -66,6 +61,13 @@ const HeroSection = () => {
     tl.current.from(".title-icon", {
       scale: 0,
       rotation: 360,
+      duration: 1,
+      ease: "elastic.out(1, 0.5)"
+    }, "-=0.5");
+
+    tl.current.from(".subtitle-icon", {
+      scale: 0,
+      rotation: 270,
       duration: 1,
       ease: "elastic.out(1, 0.5)"
     }, "-=0.5");
@@ -122,28 +124,31 @@ const HeroSection = () => {
               <h1
                 className="text-secondary text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold flex items-center gap-3">
                 <FaHardHat className="title-icon" />
-                <span className="brand-text">
-                  {renderAnimatedText("codabs", "brand")}
+                <span className="brand-text font-title">
+                  codabs
                 </span>
               </h1>
-              <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mt-1">
-                {renderAnimatedText("constructions", "construction")}
+              <h1 className="text-white brand-text-2 text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mt-1">
+                constructions
               </h1>
             </div>
 
             {/* Subtitle */}
-            <h4 className="text-white text-base sm:text-xl lg:text-3xl flex items-center gap-2 max-w-3xl">
-              <FaBuilding className="subtitle-icon text-secondary" />
-              <span className="font-subtitle">
-                <span className="text-secondary">
-                  {renderAnimatedText("Building with Purpose,", "subtitle")}
+            <h3 className="text-white text-xl lg:text-3xl flex items-center gap-2 max-w-3xl">
+
+              <span className="flex flex-col font-bold">
+                <span className="text-secondary flex gap-2 items-center">
+                  <FaBuilding className="subtitle-icon text-secondary" />
+                  <span className={`construction-char`}>Building with Purpose</span>
                 </span>
-                {renderAnimatedText(" Crafting the Future.", "subtitle")}
+                 <span className={`subtitle-char`}>
+                   Crafting the Future
+                 </span>
               </span>
-            </h4>
+            </h3>
 
             {/* Paragraph */}
-            <p className="hero-paragraph text-white text-sm sm:text-base lg:text-lg mt-2 max-w-2xl leading-relaxed">
+            <p className="hero-paragraph text-white text-md lg:text-lg mt-2 max-w-2xl leading-relaxed">
               At <span className="text-secondary font-bold">Codabs Construction</span>, we don’t just build structures —
               we create
               landmarks of trust, innovation, and lasting quality. Every detail matters, and every project reflects our
@@ -169,9 +174,9 @@ const HeroSection = () => {
             {/* Quick Call & Stats */}
             <div className="pt-12 lg:pt-20 pb-16 flex items-start lg:items-center justify-between gap-10">
               {/* Quick Call */}
-              <div className="quick-call space-y-2">
-                <p className="text-white text-lg sm:text-xl font-semibold">In a haste?</p>
-                <p className="text-white text-lg sm:text-xl font-semibold">
+              <div className="quick-call">
+                <p className="text-white text-md lg:text-lg font-semibold">In a haste?</p>
+                <p className="text-white text-md lg:text-lg font-semibold">
                   <span className="text-secondary">Call Us Now:</span> 0209494008
                 </p>
               </div>
