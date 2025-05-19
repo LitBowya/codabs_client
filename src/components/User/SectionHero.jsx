@@ -38,7 +38,7 @@ const SectionHero = ({
       ></div>
 
       {/* Content */}
-      <div className="relative z-2 h-full flex flex-col justify-center px-4 sm:px-6 lg:px-8">
+      <div className="relative z-2 h-full flex flex-col justify-center py-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
 
           {/* Tags */}

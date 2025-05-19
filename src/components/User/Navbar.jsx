@@ -71,7 +71,7 @@ const Navbar = () => {
                 {/* Logo with animation ref */}
                 <Link
                     to="/"
-                    className="text-2xl font-black text-white uppercase tracking-wide"
+                    className="text-xl lg:text-2xl font-black font-title text-white uppercase tracking-wide"
                     ref={logoRef}
                 >
                     Codabs
@@ -94,7 +94,7 @@ const Navbar = () => {
 
                 {/* Mobile Icon with animation ref */}
                 <div
-                    className="md:hidden text-2xl text-white"
+                    className="md:hidden text-xl text-white"
                     onClick={toggleMenu}
                     ref={menuIconRef}
                 >
