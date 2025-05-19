@@ -133,7 +133,7 @@ export const TeamList = ({ team }) => {
   );
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {sortedTeam.slice(0, 3).map((member, index) => (
         <AnimatedScrollElement
           key={member._id}

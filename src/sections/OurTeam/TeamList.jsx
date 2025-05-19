@@ -49,10 +49,10 @@ const TeamList = () => {
                 <h2 className="mx-6 text-3xl font-bold text-secondary text-start">
                   {role}
                 </h2>
-                <div className="flex-1 h-px bg-secondary-lighter"></div>
+                <div className="flex-1 h-px bg-secondary"></div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {groupByRole[role].map((member, index) => (
                   <AnimatedScrollElement
                     key={member._id}

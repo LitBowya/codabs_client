@@ -182,7 +182,7 @@ const HeroSection = () => {
               </div>
 
               {/* Stats */}
-              <div className="hidden lg:grid lg:grid-cols-3 gap-4 text-center">
+              <div className="hidden md:grid md:grid-cols-3 gap-4 text-center">
                 <div className="stat-box p-1 bg-white lg:px-4   lg:py-3 rounded-full">
                   <p className="text-lg lg:text-2xl font-bold text-black">120+</p>
                   <p className="text-black text-sm sm:text-base">Projects</p>
